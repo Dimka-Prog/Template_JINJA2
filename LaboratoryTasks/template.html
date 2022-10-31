@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel</title>
+</head>
+<body>
+    <div style="display: inline-block; vertical-align: top; border: 2px solid cadetblue">
+        <p><b>Лабораторная работа</b>. <i>Задание 1</i>:</p>
+        <p>Привет, {{user[0]}}!</p>
+        <p>Ваша образовательная программа <b>{{user[2]}}</b>.</p>
+        <p>
+            Вы изучаете дисциплины:<br>
+            <ul>
+                <li>{{user[3][0]}}</li>
+                <li>{{user[3][1]}}</li>
+                <li>{{user[3][2]}}</li>
+            </ul>
+        </p>
+    </div>
+    <div style="display: inline-block; vertical-align: top; border: 2px solid cadetblue">
+        <p><b>Лабораторная работа</b>. <i>Задания 2 и 3</i>:</p>
+        <p>Привет,
+            {% if user[4] == "ж" %}
+                студентка
+            {% else %}
+                студент
+            {% endif %}
+            {{user[0]}}!
+        </p>
+        <p>Ваша образовательная программа <b>{{user[1]}} {{user[2]}}</b>.</p>
+        <p>
+            {% set countDiscipline = len(user[3]) %}
+            Вы изучаете дисциплины:<br>
+            <ul>
+                {% for i in range(countDiscipline) %}
+                    {% if i == countDiscipline - 1 %}
+                        <li>{{user[3][i]}}.</li>
+                    {% else %}
+                        <li>{{user[3][i]}},</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </p>
+    </div>
+    <div style="display: inline-block; vertical-align: top; border: 2px solid cadetblue">
+        <p><b>Лабораторная работа</b>. <i>Задания 4 и 5</i>:</p>
+        <p>Привет,
+            {% if user[4] == "ж" %}
+                студентка
+            {% else %}
+                студент
+            {% endif %}
+            {{add_space(user[0])}}!
+        </p>
+        <p>Ваша образовательная программа <b>{{user[1]}} {{add_space(user[2])}}</b>.</p>
+        <p>
+            {% set countDiscipline = len(user[3]) %}
+
+            Вы изучаете {{countDiscipline}}
+            {% if countDiscipline == 1 %}
+                дисциплина:<br>
+            {% elif 1 < countDiscipline < 5 %}
+                дисциплины:<br>
+            {% else %}
+                дисциплин:<br>
+            {% endif %}
+
+            {% macro renderList(list) %}
+                {% set length = len(list) %}
+                <ul>
+                    {% for i in range(length) %}
+                        {% if i == length - 1 %}
+                            <li>{{list[i]}}.</li>
+                        {% else %}
+                            <li>{{list[i]}},</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endmacro %}
+            {{renderList(user[3])}}
+        </p>
+    </div>
+</body>
+</html>
