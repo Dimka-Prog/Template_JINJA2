@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+    <div id="divTable">
+        <table>
+          <tr>
+            <th>x</th>
+            <th>f(x)</th>
+          </tr>
+          <tbody>
+          
+              <tr>
+                <td>-2</td>
+                <td>0.2</td>
+              </tr>
+          
+              <tr>
+                <td>-1.733</td>
+                <td>0.2497</td>
+              </tr>
+          
+              <tr>
+                <td>-1.467</td>
+                <td>0.3173</td>
+              </tr>
+          
+              <tr>
+                <td>-1.2</td>
+                <td>0.4098</td>
+              </tr>
+          
+              <tr>
+                <td>-0.933</td>
+                <td>0.5344</td>
+              </tr>
+          
+              <tr>
+                <td>-0.667</td>
+                <td>0.6923</td>
+              </tr>
+          
+              <tr>
+                <td>-0.4</td>
+                <td>0.8621</td>
+              </tr>
+          
+              <tr>
+                <td>-0.133</td>
+                <td>0.9825</td>
+              </tr>
+          
+              <tr>
+                <td>0.133</td>
+                <td>0.9825</td>
+              </tr>
+          
+              <tr>
+                <td>0.4</td>
+                <td>0.8621</td>
+              </tr>
+          
+              <tr>
+                <td>0.667</td>
+                <td>0.6923</td>
+              </tr>
+          
+              <tr>
+                <td>0.933</td>
+                <td>0.5344</td>
+              </tr>
+          
+              <tr>
+                <td>1.2</td>
+                <td>0.4098</td>
+              </tr>
+          
+              <tr>
+                <td>1.467</td>
+                <td>0.3173</td>
+              </tr>
+          
+              <tr>
+                <td>1.733</td>
+                <td>0.2497</td>
+              </tr>
+          
+              <tr>
+                <td>2.0</td>
+                <td>0.2</td>
+              </tr>
+          
+              <tr>
+                <td>2.267</td>
+                <td>0.1629</td>
+              </tr>
+          
+              <tr>
+                <td>2.533</td>
+                <td>0.1348</td>
+              </tr>
+          
+              <tr>
+                <td>2.8</td>
+                <td>0.1131</td>
+              </tr>
+          
+              <tr>
+                <td>3.067</td>
+                <td>0.0961</td>
+              </tr>
+          
+              <tr>
+                <td>3.333</td>
+                <td>0.0826</td>
+              </tr>
+          
+              <tr>
+                <td>3.6</td>
+                <td>0.0716</td>
+              </tr>
+          
+              <tr>
+                <td>3.867</td>
+                <td>0.0627</td>
+              </tr>
+          
+              <tr>
+                <td>4.133</td>
+                <td>0.0553</td>
+              </tr>
+          
+              <tr>
+                <td>4.4</td>
+                <td>0.0491</td>
+              </tr>
+          
+              <tr>
+                <td>4.667</td>
+                <td>0.0439</td>
+              </tr>
+          
+              <tr>
+                <td>4.933</td>
+                <td>0.0395</td>
+              </tr>
+          
+              <tr>
+                <td>5.2</td>
+                <td>0.0357</td>
+              </tr>
+          
+              <tr>
+                <td>5.467</td>
+                <td>0.0324</td>
+              </tr>
+          
+              <tr>
+                <td>5.733</td>
+                <td>0.0295</td>
+              </tr>
+          
+              <tr>
+                <td>6.0</td>
+                <td>0.027</td>
+              </tr>
+          
+          </tbody>
+        </table>
+    </div>
+    <div id="divImg">
+        <img src="pict.jpg">
+        <form action="/labJINJA/HTML/" method="POST">
+            <label>Функция:
+                <select style="margin-bottom: 5px">
+                    
+                        
+                            <option value=0> f(x) </option>
+                        
+                    
+                        
+                            <option value=1> y(x) </option>
+                        
+                    
+                        
+                            <!-- Атрибут selected означает, что указанный вариант будет выбран сразу при загрузке страницы -->
+                            <option selected value=2> z(x) </option>
+                        
+                    
+                </select>
+            </label><br>
+            <label>Начало интервала: <input type=text name=A value=-2 size=1></label><br>
+            <label>Конец интервала: <input type=text name=B value=6 size=1></label><br>
+            <label>Количество значений: <input type=text name=count_p value=30 size=1></label><br>
+            <input type=submit value="Построить">
+        </form>
+        <p id="functions">
+            
+                <b>z(x) = 1 / (x<sup>2</sup> + 1) </b>
+            
+        </p>
+    </div>
+</body>
+<link rel="stylesheet" href="../CSS/index.css">
+</html>

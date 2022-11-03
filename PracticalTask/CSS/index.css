@@ -1,0 +1,39 @@
+#divTable{
+	display: inline-block;
+	vertical-align: top;
+}
+#divImg{
+	display: inline-block;
+	padding-top: 7%;
+}
+
+table{
+	margin-bottom: 15px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+    text-align: center;
+}
+
+th{
+	padding: 4px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+
+td{
+	border: 1px solid #dddddd;
+	padding: 4px;
+}
+
+form{
+	display: inline-block;
+	margin-left: 10%;
+}
+
+input{
+	margin-bottom: 5px;
+}
+
+#functions{
+	margin-left: 15%;
+}

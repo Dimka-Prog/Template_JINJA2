@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+    <div id="divTable">
+        <table>
+          <tr>
+            <th>x</th>
+            <th>f(x)</th>
+          </tr>
+          <tbody>
+          {% for i in range(len(x)) %}
+              <tr>
+                <td>{{round(x[i], 3)}}</td>
+                <td>{{round(y[i], 4)}}</td>
+              </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+    </div>
+    <div id="divImg">
+        <img src="{{pict}}">
+        <form action="/labJINJA/HTML/" method="POST">
+            <label>Функция:
+                <select style="margin-bottom: 5px">
+                    {% for i in range(len(nameFunc)) %}
+                        {% if numFunc == i %}
+                            <!-- Атрибут selected означает, что указанный вариант будет выбран сразу при загрузке страницы -->
+                            <option selected value={{i}}> {{nameFunc[i]}} </option>
+                        {% else %}
+                            <option value={{i}}> {{nameFunc[i]}} </option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </label><br>
+            <label>Начало интервала: <input type=text name=A value={{a}} size=1></label><br>
+            <label>Конец интервала: <input type=text name=B value={{b}} size=1></label><br>
+            <label>Количество значений: <input type=text name=count_p value={{n}} size=1></label><br>
+            <input type=submit value="Построить">
+        </form>
+        <p id="functions">
+            {% if numFunc == 0 %}
+                <b>f(x) = x<sup>3</sup> - 6x<sup>2</sup> + x + 5 </b>
+            {% elif numFunc == 1 %}
+                <b>y(x) = x<sup>2</sup> - 5x + 1 </b>
+            {% elif numFunc == 2 %}
+                <b>z(x) = 1 / (x<sup>2</sup> + 1) </b>
+            {% endif %}
+        </p>
+    </div>
+</body>
+<link rel="stylesheet" href="../CSS/index.css">
+</html>
